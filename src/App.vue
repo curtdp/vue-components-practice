@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+              <header>
+                <h1>Server Status</h1>
+              </header>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <ul class="list-group">
+              <li class="list-group-item"
+                v-for="index in 5">
+                Server #{{ index }}
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <p>Server Details Currently not updated</p>
+          </div>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
