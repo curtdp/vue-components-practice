@@ -5,8 +5,18 @@
 </template>
 
 <script>
+  import { serverBus } from '../../main.js';
   export default {
-
+    data() {
+      return {
+        server: null
+      }
+    },
+    created() {
+      serverBus.$on('serverSelected', (server) => {
+        this.server = server;
+      });
+    }
   }
 </script>
 
