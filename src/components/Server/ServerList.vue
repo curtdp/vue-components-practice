@@ -1,14 +1,13 @@
 <template>
   <div class="col-xs-12 col-sm-6">
     <ul class="list-group">
-      <li class="list-group-item" v-for="index in 5" >
-        Server # {{ index }}
-      </li>
+      <ServerListItem v-for="server in servers" :id="server.id" :key="server.id"></ServerListItem>
     </ul>
   </div>
 </template>
 
 <script>
+  import ServerListItem from './ServerListItem.vue'
   export default {
     data() {
       return {
@@ -19,6 +18,9 @@
           { id: 4, status: 'Normal'},
         ]
       }
+    },
+    components: {
+      ServerListItem
     }
   }
 </script>
