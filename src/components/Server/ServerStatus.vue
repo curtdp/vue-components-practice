@@ -10,6 +10,8 @@
   }
 </script>
 
-<style scoped>
-
+<style>
+  div {
+    border: 1px solid red;
+  }
 </style>
