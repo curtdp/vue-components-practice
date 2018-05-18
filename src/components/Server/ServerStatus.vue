@@ -2,6 +2,8 @@
   <div class="col-xs-12 col-sm-6">
     <p v-if="!server">Please select server</p>
     <p v-else>Server {{ server.id }} selected. Status: {{ server.status }}</p>
+    <hr>
+    <button v-if="server" @click="resetStatus">Change status to Normal</button>
   </div>
 </template>
 
@@ -11,6 +13,11 @@
     data() {
       return {
         server: null
+      }
+    },
+    methods: {
+      resetStatus() {
+        this.server.status = 'Normal';
       }
     },
     created() {
