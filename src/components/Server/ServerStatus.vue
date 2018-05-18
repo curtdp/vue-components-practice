@@ -1,6 +1,7 @@
 <template>
   <div class="col-xs-12 col-sm-6">
-    <p>Server Details Currently not updated</p>
+    <p v-if="!server">Please select server</p>
+    <p v-else>Server {{ server.id }} selected. Status: {{ server.status }}</p>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="col-xs-12 col-sm-6">
     <ul class="list-group">
-      <ServerListItem v-for="server in servers" :id="server.id" :key="server.id"></ServerListItem>
+      <ServerListItem v-for="server in servers" :server="server" :key="server.id"></ServerListItem>
     </ul>
   </div>
 </template>
